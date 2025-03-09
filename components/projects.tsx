@@ -48,6 +48,7 @@ interface Project {
   liveDemo: string;
   category: string;
   featured: boolean;
+  github: string;
 }
 
 export default function Projects() {
