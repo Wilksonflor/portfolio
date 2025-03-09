@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { createContext, useContext, useState, useEffect } from "react"
+import type React from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
-type Language = "pt-BR" | "en"
+type Language = "pt-BR" | "en";
 
 interface Translations {
   [key: string]: {
-    [key: string]: string
-  }
+    [key: string]: string;
+  };
 }
 
 const translations: Translations = {
@@ -18,7 +18,8 @@ const translations: Translations = {
     projects: "Projetos",
     services: "Serviços",
     contact: "Contato",
-    contactDescription: "Tem um projeto em mente ou quer conversar sobre uma oportunidade? Entre em contato!",
+    contactDescription:
+      "Tem um projeto em mente ou quer conversar sobre uma oportunidade? Entre em contato!",
     location: "Localização",
     email: "Email",
     phone: "Telefone",
@@ -36,7 +37,8 @@ const translations: Translations = {
     contactMe: "Entre em contato",
     viewProjects: "Ver projetos",
     aboutTitle: "Sobre Mim",
-    aboutDescription: "Conheça um pouco da minha trajetória e habilidades como desenvolvedor.",
+    aboutDescription:
+      "Conheça um pouco da minha trajetória e habilidades como desenvolvedor.",
     myJourney: "Minha Trajetória",
     journeyDescription:
       "Natural de Palmares-PE, minha jornada na tecnologia começou com a curiosidade sobre como as coisas funcionam no mundo digital. Essa curiosidade me levou a cursar Desenvolvimento de Sistemas na UNINASSAU, onde pude aprofundar meus conhecimentos técnicos e descobrir minha paixão pelo desenvolvimento front-end.",
@@ -65,10 +67,12 @@ const translations: Translations = {
     technicalConsulting: "Consultoria Técnica",
     technicalConsultingDesc:
       "Consultoria em desenvolvimento de software, arquitetura de aplicações e escolha de tecnologias para projetos.",
-    services: "Serviços",
-    servicesDescription: "Ofereço soluções personalizadas para atender às necessidades específicas do seu projeto.",
-    projects: "Projetos",
-    projectsDescription: "Conheça alguns dos projetos que desenvolvi, aplicando diferentes tecnologias e soluções.",
+    services1: "Serviços",
+    servicesDescription:
+      "Ofereço soluções personalizadas para atender às necessidades específicas do seu projeto.",
+    projects1: "Projetos",
+    projectsDescription:
+      "Conheça alguns dos projetos que desenvolvi, aplicando diferentes tecnologias e soluções.",
     viewDetails: "Ver detalhes",
     technologiesUsed: "Tecnologias utilizadas",
     detailedDescription: "Descrição detalhada",
@@ -88,7 +92,8 @@ const translations: Translations = {
       "Utilização de ferramentas e metodologias que auxiliam no processo de desenvolvimento e colaboração em equipe.",
 
     // Coletiva
-    coletivaDesc: "Plataforma colaborativa para compartilhamento e gerenciamento de trabalhos acadêmicos.",
+    coletivaDesc:
+      "Plataforma colaborativa para compartilhamento e gerenciamento de trabalhos acadêmicos.",
     coletivaDetailedDesc:
       "Coletiva é uma plataforma web desenvolvida para facilitar o compartilhamento e gerenciamento de trabalhos acadêmicos entre estudantes universitários. O sistema permite que os usuários façam upload, categorizem e compartilhem seus trabalhos, além de pesquisar e acessar trabalhos de outros usuários.",
     coletivaChallenges:
@@ -97,7 +102,8 @@ const translations: Translations = {
       "Implementei um sistema de busca otimizado utilizando indexação de conteúdo, desenvolvi um sistema de permissões baseado em papéis de usuário e criei uma interface responsiva com Tailwind CSS e Framer Motion para garantir uma experiência fluida em todos os dispositivos.",
 
     // SuppleManager
-    suppleManagerDesc: "Sistema de gerenciamento de estoque e vendas para lojas de suplementos.",
+    suppleManagerDesc:
+      "Sistema de gerenciamento de estoque e vendas para lojas de suplementos.",
     suppleManagerDetailedDesc:
       "SuppleManager é uma aplicação web completa para gerenciamento de estoque, vendas e clientes de lojas de suplementos alimentares. O sistema inclui funcionalidades como controle de estoque em tempo real, gestão de pedidos, cadastro de clientes, relatórios de vendas e integração com métodos de pagamento.",
     suppleManagerChallenges:
@@ -107,7 +113,8 @@ const translations: Translations = {
 
     // Primeiro Portfolio
     firstPortfolioTitle: "Portfolio Original",
-    firstPortfolioDesc: "Meu primeiro portfolio profissional desenvolvido com React e Styled Components.",
+    firstPortfolioDesc:
+      "Meu primeiro portfolio profissional desenvolvido com React e Styled Components.",
     firstPortfolioDetailedDesc:
       "Este foi meu primeiro portfolio profissional, desenvolvido para apresentar meus projetos e habilidades de forma atrativa e funcional. O site conta com seções para apresentação pessoal, projetos, habilidades técnicas e formulário de contato.",
     firstPortfolioChallenges:
@@ -116,7 +123,8 @@ const translations: Translations = {
       "Utilizei React com Styled Components para criar um design personalizado e Framer Motion para implementar animações suaves e de alta performance. Adotei uma abordagem mobile-first para garantir uma experiência consistente em todos os dispositivos.",
 
     // GitHub Find
-    githubFindDesc: "Aplicação para busca e visualização de perfis e repositórios do GitHub.",
+    githubFindDesc:
+      "Aplicação para busca e visualização de perfis e repositórios do GitHub.",
     githubFindDetailedDesc:
       "GitHub Find é uma aplicação web que permite aos usuários buscar perfis do GitHub e visualizar informações detalhadas sobre usuários e seus repositórios. A aplicação consome a API pública do GitHub para exibir dados como repositórios populares, contribuições, seguidores e linguagens mais utilizadas.",
     githubFindChallenges:
@@ -125,7 +133,8 @@ const translations: Translations = {
       "Implementei um sistema de cache local para reduzir o número de requisições à API, utilizei gráficos e visualizações de dados para apresentar informações de forma clara e intuitiva, e criei um design responsivo com Styled Components para uma experiência consistente em diferentes dispositivos.",
 
     // Shoes Jordan
-    shoesJordanDesc: "E-commerce especializado em tênis da linha Jordan com experiência de compra imersiva.",
+    shoesJordanDesc:
+      "E-commerce especializado em tênis da linha Jordan com experiência de compra imersiva.",
     shoesJordanDetailedDesc:
       "Shoes Jordan é um e-commerce especializado em tênis da linha Jordan, oferecendo uma experiência de compra imersiva e diferenciada. O site conta com visualização 3D dos produtos, histórico de cada modelo, sistema de recomendação personalizada e integração com métodos de pagamento.",
     shoesJordanChallenges:
@@ -150,7 +159,8 @@ const translations: Translations = {
     projects: "Projects",
     services: "Services",
     contact: "Contact",
-    contactDescription: "Have a project in mind or want to discuss an opportunity? Get in touch!",
+    contactDescription:
+      "Have a project in mind or want to discuss an opportunity? Get in touch!",
     location: "Location",
     email: "Email",
     phone: "Phone",
@@ -176,7 +186,8 @@ const translations: Translations = {
       "With 1.5 years of professional experience, I have specialized in creating interactive and responsive interfaces using ReactJS and React Native, always seeking to apply the best development and design practices.",
     fullStack:
       "In addition to front-end, I also have knowledge in back-end technologies such as Node.js, Express, MongoDB and PostgreSQL, which allows me to have a more complete view of web and mobile application development.",
-    footerDescription: "Front-end developer specialized in creating interactive and responsive digital experiences.",
+    footerDescription:
+      "Front-end developer specialized in creating interactive and responsive digital experiences.",
     rightsReserved: "All rights reserved.",
     webDevelopment: "Web Development",
     webDevelopmentDesc:
@@ -196,9 +207,10 @@ const translations: Translations = {
     technicalConsulting: "Technical Consulting",
     technicalConsultingDesc:
       "Consulting on software development, application architecture, and technology choices for projects.",
-    services: "Services",
-    servicesDescription: "I offer customized solutions to meet the specific needs of your project.",
-    projects: "Projects",
+    servicess: "Services",
+    servicesDescription:
+      "I offer customized solutions to meet the specific needs of your project.",
+    projectss: "Projects",
     projectsDescription:
       "Check out some of the projects I've developed, applying different technologies and solutions.",
     viewDetails: "View details",
@@ -213,9 +225,11 @@ const translations: Translations = {
     frontendDescription:
       "Development of interactive and responsive user interfaces, focusing on user experience and performance.",
     backendTitle: "Back-end",
-    backendDescription: "Knowledge in API and web service development, database management, and business logic.",
+    backendDescription:
+      "Knowledge in API and web service development, database management, and business logic.",
     toolsTitle: "Tools",
-    toolsDescription: "Use of tools and methodologies that assist in the development process and team collaboration.",
+    toolsDescription:
+      "Use of tools and methodologies that assist in the development process and team collaboration.",
 
     // Novas traduções para a seção de projetos
     searchProjects: "Search projects...",
@@ -228,36 +242,38 @@ const translations: Translations = {
     noProjectsFound: "No projects found with current filters.",
     featured: "Featured",
   },
-}
+};
 
 interface LanguageContextType {
-  language: Language
-  setLanguage: (lang: Language) => void
-  t: (key: string) => string
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>("pt-BR")
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  const [language, setLanguage] = useState<Language>("pt-BR");
 
   const t = (key: string): string => {
-    return translations[language][key] || key
-  }
+    return translations[language][key] || key;
+  };
 
-  useEffect(() => {
-    // This effect will run whenever the language changes
-    console.log("Language changed to:", language)
-  }, [language])
-
-  return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>
-}
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
 
 export const useLanguage = () => {
-  const context = useContext(LanguageContext)
+  const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider")
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
-  return context
-}
-
+  return context;
+};
