@@ -118,7 +118,7 @@ export default function Projects() {
       description:
         "Um site moderno e interativo para uma cafeteria aconchegante, apresentando cardápio, localização e informações do ambiente.",
       image: "/projects/cafevida.png",
-      technologies: ["React", "Tailwind CSS", "Framer Motion", "Next.js"],
+      technologies: ["React", "Tailwind CSS", "Framer Motion", "React.js"],
       detailedDescription:
         "O Café Vida é um site sofisticado e responsivo desenvolvido para apresentar a identidade visual de uma cafeteria moderna. Conta com animações suaves, carregamento otimizado e um design envolvente.",
       challenges:
