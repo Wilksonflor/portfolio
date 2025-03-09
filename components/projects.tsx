@@ -36,12 +36,26 @@ import {
 } from "@/components/ui/select";
 import { useLanguage } from "@/components/language-provider";
 
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  detailedDescription: string;
+  challenges: string;
+  solutions: string;
+  liveDemo: string;
+  category: string;
+  featured: boolean;
+}
+
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [filteredProjects, setFilteredProjects] = useState([]);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   const projectsPerPage = 6;
   const { t } = useLanguage();
 
